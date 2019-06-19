@@ -1,0 +1,77 @@
+
+body {
+	background-image: url("../images/background.jpg");
+	
+}
+
+
+#gameSection, #points, #numberSection, #totalPoints {
+	
+	margin-left: 10px;
+	margin-right: 20px;
+	opacity: 0.9;
+  	filter: alpha(opacity=90); 
+}
+
+
+.game-body {
+	width: 60%;
+	margin: 0 auto;
+	background-color: white;
+	opacity: 0.8;
+	filter: alpha(opacity=80); 
+	  
+}
+
+#crystals {
+
+	/*background-color: yellow;*/
+	padding: 0px;
+	padding-top: 50px;
+	padding-bottom: 25px;
+	margin-left: 300px;
+}
+
+
+.jumbotron {
+	background-color: #ffffff;
+	height: 120px;
+	width: 100%;
+	opacity: 0.9;
+	padding-top: 1px;
+  	filter: alpha(opacity=90); 
+}
+
+.text-center {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.header-text {
+	text-align: center;
+	padding-bottom: 50px;
+	margin-top: 0px;
+}
+
+h1, h2, h3 {
+	font-family: 'Poppins', sans-serif;
+}
+
+p {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.numberBox {
+	font-size: 100px;
+	margin: 0px;
+}
+
+/* images for buttons */
+.icons {
+	display: inline-block;
+  	max-width: 100px;
+  	max-height: 100px;
+  	width: auto;
+  	height: auto;
+  	margin:10px;
+}
