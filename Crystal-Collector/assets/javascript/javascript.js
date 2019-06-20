@@ -12,10 +12,11 @@ $(document).ready(function() {
 		crystalValue.push(k);
 	}
 
+	
 
-	var randNumber; // number to match
-	var crystalNumbers = []; // for array of random crystal values
 
+	var randNumber; 
+	var crystalNumbers = []; 
 	var amber;
 	var ruby;
 	var topaz;
@@ -35,9 +36,7 @@ $(document).ready(function() {
 
 		console.log("random number: " + randNumber);
 
-	} // END of pickRandomNumber function
-
-	// pick random numbers for crystals
+	} 
 
 	function pickRandomCrystals(arr) {
 
@@ -47,33 +46,31 @@ $(document).ready(function() {
 
 			crystalNumbers.push(a);
 		}
-    // check which numbers have been picked
+
 		console.log("crystal numbers: " + crystalNumbers);
 
-	} // END of pickRandomCrystals function
+	}
 
 	function crystalValues(arr) {
+		for (j = 0; j < arr.length; j++) {
 
-		// change value of each crystal button according to array
-		for (i = 0; i < arr.length; i++) {
-
-		$("#button-" + (i + 1)).attr("value", arr[i]);
+		$("#button-" + (j+1)).attr("value", arr[j]);
 		console.log(this);
 		}
 		amber = arr[0];
-		ruby = arr[1];
-		topaz = arr[2];
-		amethyst = arr[3];
+		amethyst = arr[1];
+		ruby = arr[2];
+		topaz = arr[3];
 	} 
 
 
 	function gameReset(x) {
 
-		crystalNumbers = []; // clears crystal number values
+		crystalNumbers = []; 
 
 		pickRandomNumber(randomNumber);
 
-		pickRandomCrystals(crystals);
+		pickRandomCrystals(crystalValue);
 
 		crystalValues(crystalNumbers);
 
@@ -81,25 +78,24 @@ $(document).ready(function() {
 		$("#totalNumber").html(totalScore);
 
 		alert(x);
-	} // END of gameReset function
+	}
 
-	// *** GAME SETTINGS AT START ***
 
-	pickRandomNumber(randomNumber); // random number to match
-	pickRandomCrystals(crystals); // array of random crystal values
+	pickRandomNumber(randomNumber); 
+	pickRandomCrystals(crystalValue); 
 	crystalValues(crystalNumbers);
 
 
 
 		$("#button-1").on("click", function() {
 
-			totalScore += amethyst;
+			totalScore += amber;
 			$("#totalNumber").html(totalScore);
 		});
 
 		$("#button-2").on("click", function() {
 
-			totalScore += topaz;
+			totalScore += amethyst;
 			$("#totalNumber").html(totalScore);
 		});
 
@@ -111,10 +107,12 @@ $(document).ready(function() {
 
 		$("#button-4").on("click", function() {
 
-			totalScore += amber;
+			totalScore += topaz;
 			$("#totalNumber").html(totalScore);
 		});
 
+
+		
 	$("button").on("click", function() {
 		if (totalScore == randNumber) {
 			wins++;
